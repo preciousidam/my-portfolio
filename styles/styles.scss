@@ -1,0 +1,498 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "./component.scss";
+
+
+//@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap");
+
+$background: #F5FAFA;
+$font-main: 'Raleway', sans-serif;
+$light-text: #FFFFFF;
+$blue-theme-color: #089de3;
+$pink-theme-color: #e3089d;
+$orange-theme-color: #e34e08;
+$green-theme-color: #08e34e;
+$blue-theme-color-shade: #067bb2;
+$off-black-color: #313639;
+
+$twitter: #00acee;
+$facebook: #3b5998;
+$github: #333;
+$linkedin: #0077b5;
+$instagram: #fcaf45;
+
+body{
+    height: 100% !important;
+    width: 100% !important;
+    background-color: $background !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: $font-main;
+    color: $off-black-color !important;
+}
+
+///MAIN LAYOUT/////
+.layout{
+    width: 100% !important;
+    height: 100% !important;
+    text-align: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+//////HEADER/////////
+#navbar{
+    background-color: transparent;
+    width: 100% !important;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+}
+
+#navbar-solid{
+    background-color: $blue-theme-color !important;
+    width: 100% !important;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+}
+
+#navbar-content{
+    padding: 15px;
+}
+
+#navbar-content-ul{
+    list-style-type: none;
+    display: inline;
+}
+
+.links{
+    color: $light-text !important;
+    display: table-cell;
+    padding: 10px 20px;
+}
+
+.links a{
+    color: $light-text !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px !important;
+}
+
+.links a:active{
+    color: $blue-theme-color;
+    background-color: $light-text;
+    border-radius: 2;
+}
+
+.links a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+.links a:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+
+///SIDEBAR LAYOUT
+.sidebar{
+    position: absolute !important;
+    width: 20% !important;
+    height: 100% !important;
+    background-color: #f9f9f9 !important;
+    margin: 0 !important;
+}
+
+#slider {
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+}
+
+.slide-in {
+    animation: slide-in 0.5s forwards;
+    -webkit-animation: slide-in 0.5s forwards;
+}
+
+.slide-out {
+    animation: slide-out 0.5s forwards;
+    -webkit-animation: slide-out 0.5s forwards;
+}
+    
+@keyframes slide-in {
+    100% { transform: translateX(0%); }
+}
+
+@-webkit-keyframes slide-in {
+    100% { -webkit-transform: translateX(0%); }
+}
+    
+@keyframes slide-out {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
+@-webkit-keyframes slide-out {
+    0% { -webkit-transform: translateX(0%); }
+    100% { -webkit-transform: translateX(-100%); }
+}
+
+
+//////HERO/////////
+#hero{
+    //background: rgb(36,37,130) !important;
+    //background: linear-gradient(90deg, rgba(36,37,130,1) 34%, rgba(47,47,162,1) 100%) !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    background-color: transparent;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#hero-content-container{
+    height: 100% !important;
+    min-height: 100% !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    background-color: transparent;
+}
+
+#hero-content{
+    height: 100%;
+    background-color: $blue-theme-color;
+    background-color: transparent;
+    min-height: 100% !important;
+}
+
+#particle-container{
+    height: 100%;
+    min-height: 100% !important;
+    background-color: transparent;
+}
+#tsparticles{
+    position : absolute; 
+    width:100%;
+    height:100%; 
+    z-index:-1;
+    background-color: $blue-theme-color;
+}
+#particle-container canvas{
+    width:100%;
+    height:100%; 
+    min-height: 100% !important;
+    background-color: $blue-theme-color;
+}
+
+#me{
+    width: 150px;
+    height: 150px;
+    border: solid 2px white;
+    border-radius: 75px;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+#name{
+    color: $light-text;
+    font-weight: bold;
+    text-transform: capitalize !important;
+}
+
+#proffession{
+    color: $light-text;
+    text-transform: capitalize !important;
+}
+
+#socials-container{
+    margin: 20px 20px 130px 20px;
+}
+
+.socials{
+    list-style-type: none !important;
+    display: inline !important;
+}
+
+.social-icons{
+    color: $light-text !important;
+    display: inline;
+    margin: 10px;
+}
+
+.pres{
+    color: $light-text !important;
+    padding: 12px;
+    border: solid 2px $light-text !important;
+    border-radius: 50%;
+}
+
+.twitter:hover{
+    background-color: $twitter;
+    border-color: $twitter !important;
+    -webkit-animation:spin 1s linear ;
+    -moz-animation:spin 1s linear ;
+    animation:spin 1s linear ;
+}
+
+.facebook:hover{
+    background-color: $facebook;
+    border-color: $facebook !important;
+    -webkit-animation:spin 1s linear ;
+    -moz-animation:spin 1s linear ;
+    animation:spin 1s linear ;
+}
+.github:hover{
+    background-color: $github;
+    border-color: $github !important;
+    -webkit-animation:spin 1s linear ;
+    -moz-animation:spin 1s linear ;
+    animation:spin 1s linear ;
+}
+.instagram:hover{
+    background-color: $instagram;
+    border-color: $instagram !important;
+    -webkit-animation:spin 1s linear ;
+    -moz-animation:spin 1s linear ;
+    animation:spin 1s linear ;
+}
+.linkedin:hover{
+    background-color: $linkedin;
+    border-color: $linkedin !important;
+    -webkit-animation:spin 1s linear ;
+    -moz-animation:spin 1s linear ;
+    animation:spin 1s linear ;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+//////////ABOUT////////////////
+
+#about{
+    background-color: $background;
+    width: 100% !important;
+    padding: 50px 0;
+
+    .row{
+        margin-bottom: 50px;
+    }
+
+    .col-12{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.background-me{
+    background-image: url('https://media-exp1.licdn.com/dms/image/C5603AQF6rzndzu3ovA/profile-displayphoto-shrink_200_200/0?e=1597881600&v=beta&t=Wu6JQXl2Em7zHv39szpwUJUu-x-8Ll72EVDMAPAEXcY');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bio{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding-left: 20px !important;
+    
+    p{
+        text-align: left;
+    }
+    .headers{
+        text-align: left;
+    }
+    .underline{
+        text-align: left;
+        margin-left: 35px;
+        margin-bottom: 10px;
+    }
+
+    .btn{
+        margin-right: 15px;
+    }
+}
+
+#about-header{
+    margin: 30px auto 50px auto;
+    text-align: center;
+    align-items: center;
+    width: 70%;
+}
+
+.headers{
+    font-weight: bold;
+    text-transform: capitalize;
+    color: $off-black-color !important;
+}
+
+.subheaders{
+    font-weight: bold;
+    text-transform: capitalize;
+    color: $off-black-color !important;
+}
+
+.underline{
+    min-height: 3px !important;
+    max-width: 40px !important;
+    background-color: $off-black-color;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+#skill{
+    //padding: 30px;
+}
+
+.skill{
+    width: 100px;
+    height: 100px;
+}
+
+.underline-inverse{
+    min-height: 3px !important;
+    max-width: 40px !important;
+    background-color: $light-text;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.web .CircularProgressbar-path {
+    stroke: $pink-theme-color !important;
+}
+.web .CircularProgressbar-text {
+    stroke: $pink-theme-color !important;
+    fill: $pink-theme-color !important;
+}
+
+.mobile .CircularProgressbar-path {
+    stroke: $blue-theme-color !important;
+}
+.mobile .CircularProgressbar-text {
+    stroke: $blue-theme-color !important;
+    fill: $blue-theme-color !important;
+}
+
+.desktop .CircularProgressbar-path {
+    stroke: $green-theme-color !important;
+}
+.desktop .CircularProgressbar-text {
+    stroke: $green-theme-color !important;
+    fill: $green-theme-color !important;
+}
+
+.dl .CircularProgressbar-path {
+    stroke: $orange-theme-color !important;
+}
+.dl .CircularProgressbar-text {
+    stroke: $orange-theme-color !important;
+    fill: $orange-theme-color !important;
+}
+
+.skill .CircularProgressbar-trail {
+stroke: #c6c6c6;
+}
+
+#my-story{
+    text-align: justify;
+    margin: 30px 0;
+}
+
+.vertical-timeline-element-title{
+    font-size: 15px !important;
+    font-weight: bolder;
+}
+
+.vertical-timeline-element-subtitle{
+    font-size: 15px !important;
+    font-weight: bolder;
+}
+
+.timeline-content{
+    font-size: 15px !important;
+}
+
+
+////////////FOOTER///////////////
+
+#footer{
+    width: 100% !important;
+    min-height: 100% !important;
+    background-color: $blue-theme-color !important;
+    margin: 50px 0 0 0 !important;
+    padding: 30px 0 0 0 !important;
+}
+
+#bottom-footer{
+    width: 100% !important;
+    margin-top: 50px;
+    padding: 30px 0 20px 0;
+    background-color: $blue-theme-color-shade !important;
+}
+
+#footer-container{
+    margin-top: 50px !important;
+}
+
+#contact-header{
+    color: $light-text;
+    font-weight: bold;
+    text-align: left;
+}
+
+.submit{
+    color: $light-text;
+    font-weight: bold;
+    border: solid 2px $light-text;
+}
+
+.submit:hover{
+    color: $blue-theme-color;
+    font-weight: bold;
+    border: solid 2px $light-text;
+    background-color: $light-text;
+}
+
+#contact-header-cont .underline-inverse{
+    margin-left: 45px;
+    margin-bottom: 10px;
+}
+
+.sub{
+    color: $light-text;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.social-icons-footer{
+    color: $light-text !important;
+    display: inline;
+    margin: 10px;
+}
+
+.pres-footer{
+    border: solid 2px $light-text;
+    color: $light-text !important;
+}
+
+#copyright{
+    color: $light-text !important;
+    margin-top: 20px;
+}
+

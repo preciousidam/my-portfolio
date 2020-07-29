@@ -1,0 +1,154 @@
+
+$vertical-line: #c6c6c6;
+$white: #ffffff;
+
+.MyTimeLine{
+    min-height: 20px !important;
+    align-items: center !important;
+    background-color: transparent;
+    position: relative;
+}
+
+.timeline-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center !important;
+}
+
+.vertical-line{
+    background-color: $vertical-line !important;
+    min-width: 1px !important;
+    height: 100% !important;
+    display: inline-block !important;
+    position: absolute !important;
+    top: 0;
+    bottom: 0;
+}
+
+.timeline-element{
+    background-color: $white;
+    border-radius: 5px;
+    max-width: 300px;
+    padding: 15px;
+    margin: 20px;
+    text-align: left !important;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.timeline-date{
+    font-size: 14px !important;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.timeline-title{
+    font-size: 16px !important;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.timeline-description{
+    font-size: 14px !important;
+}
+
+.left{
+    position: relative;
+    left: -180px;
+}
+
+.right{
+    position: relative;
+    right: -180px;
+}
+
+.indicator{
+    min-width: 20px !important;
+    min-height: 20px !important;
+    background-color: $vertical-line;
+    display: inline-block !important;
+    border-radius: 50% !important;
+    position: relative;
+    bottom: -60px;
+}
+
+.caretLeft{
+    position: absolute;
+    right: -4%;
+}
+
+.caretRight{
+    position: absolute;
+    left: -4%;
+}
+
+.link-to-project{
+    text-decoration: none !important;
+}
+
+
+
+
+
+
+
+/////////////////////////Linear Indicator/////////////////////////
+//////////////////////////////////////////////////////////////////
+
+.indicator-cont{
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .label{
+        position: absolute;
+        top: -25px;
+        font-size: small;
+    }
+
+    .progress{
+        max-height: 3px;
+        min-height: 3px;
+        width: 90%;
+        transition: width 2s ease-in;
+    }
+
+    .progressAnimate-enter {
+        width: 3%;
+    }
+    .progressAnimate-enter-active {
+        transition: width 200ms;
+    }
+    
+
+
+
+    .path{
+        max-height: 3px;
+        min-height: 3px;
+        position: relative;
+    }
+
+    .marker{
+        position: absolute;
+        display: flex;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        top: -35px;
+        left: 76%;
+        padding: 5px !important;
+        font-size: smaller;
+        max-width: 30px;
+        max-height: 25px;
+        color: $white;
+
+        .caret{
+            position: absolute;
+            bottom: -8px;
+        }
+    }
+    
+}
